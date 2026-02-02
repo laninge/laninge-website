@@ -130,6 +130,40 @@ function App() {
         </div>
       </section>
 
+      {/* Press Section */}
+      <section className="section section-press">
+        <div className="section-content">
+          <h2 className="section-label">Senaste i media</h2>
+          <p className="section-intro">Urval av intervjuer och framträdanden</p>
+
+          <div className="press-list">
+            <a href="https://www.svtplay.se/video/ePBB221/ekonomibyran/sociala-mediers-dod" target="_blank" rel="noopener noreferrer" className="press-item">
+              <span className="press-source">SVT Ekonomibyrån</span>
+              <span className="press-title">Sociala mediers död</span>
+              <span className="press-date">Okt 2025</span>
+            </a>
+
+            <a href="https://www.svtplay.se/video/KVwwppA/ekonomibyran/byta-bank" target="_blank" rel="noopener noreferrer" className="press-item">
+              <span className="press-source">SVT Ekonomibyrån</span>
+              <span className="press-title">Byta bank!?</span>
+              <span className="press-date">Aug 2025</span>
+            </a>
+
+            <a href="https://www.realtid.se/spara-placera/psykologin-slar-fundamentan-borsen-trotsar-verkligheten/" target="_blank" rel="noopener noreferrer" className="press-item">
+              <span className="press-source">Realtid</span>
+              <span className="press-title">Psykologin slår fundamentan – börsen trotsar verkligheten</span>
+              <span className="press-date">Jul 2025</span>
+            </a>
+
+            <a href="https://sverigesradio.se/planboken" target="_blank" rel="noopener noreferrer" className="press-item">
+              <span className="press-source">Sveriges Radio P1</span>
+              <span className="press-title">Plånboken – om sparande och konsumtion</span>
+              <span className="press-date">2025</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
