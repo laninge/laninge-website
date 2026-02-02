@@ -66,17 +66,19 @@ function App() {
               <span className="media-arrow">→</span>
             </a>
 
-            <div className="media-card">
+            <a href="https://omniekonomi.se/t/folj-skribenten-niklas-laninge/e51a66da-c58c-4eca-88ba-1f57a3ba365d" target="_blank" rel="noopener noreferrer" className="media-card">
               <span className="media-type">Krönika</span>
               <h3>Omni Ekonomi</h3>
               <p>Regelbundna krönikor om ekonomiskt beteende och konsumtion.</p>
-            </div>
+              <span className="media-arrow">→</span>
+            </a>
 
-            <div className="media-card">
+            <a href="https://open.spotify.com/show/6x65WFaPmYlHLB19ECjh77" target="_blank" rel="noopener noreferrer" className="media-card">
               <span className="media-type">Podcast</span>
-              <h3>Kommande</h3>
-              <p>Snart: integration med dina senaste poddmedverkan.</p>
-            </div>
+              <h3>Tidlösa sanningar om pengar</h3>
+              <p>Podd om sparande och privatekonomi – med beteendevetenskapliga glasögon.</p>
+              <span className="media-arrow">→</span>
+            </a>
           </div>
 
           <p className="media-note">
