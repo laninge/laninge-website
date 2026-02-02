@@ -35,15 +35,22 @@
   flex-shrink: 0;
 }
 
-.hero-image img {
+.hero-image {
+  flex-shrink: 0;
   width: 340px;
   height: 340px;
-  object-fit: cover;
-  object-position: center 15%;
   border-radius: 50%;
+  overflow: hidden;
   box-shadow:
     0 0 0 4px rgba(99, 102, 241, 0.3),
     0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
 }
 
 .hero-label {
