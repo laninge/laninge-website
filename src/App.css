@@ -542,7 +542,7 @@
     text-align: center;
   }
 
-  .hero-image img {
+  .hero-image {
     width: 220px;
     height: 220px;
   }
@@ -585,8 +585,8 @@
     color: #bbb;
   }
 
-  .hero-image img {
-    width: 180px;
-    height: 180px;
+  .hero-image {
+    width: 200px;
+    height: 200px;
   }
 }
