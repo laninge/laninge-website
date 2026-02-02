@@ -139,7 +139,7 @@ function App() {
               <span className="contact-icon">✉️</span>
               niklas@laninge.com
             </a>
-            <a href="https://www.linkedin.com/in/niklaslaning/" target="_blank" rel="noopener noreferrer" className="contact-link">
+            <a href="https://www.linkedin.com/in/laninge/" target="_blank" rel="noopener noreferrer" className="contact-link">
               <span className="contact-icon">💼</span>
               LinkedIn
             </a>
