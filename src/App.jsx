@@ -91,35 +91,41 @@ function App() {
           <p className="section-intro">Tre böcker om beteendedesign</p>
 
           <div className="books-grid">
-            <div className="book-card">
-              <div className="book-year">2017</div>
-              <h3>Beteendedesign</h3>
-              <p className="book-publisher">Natur & Kultur</p>
-              <p>En praktisk guide till hur du kan använda beteendeekonomi för att designa bättre produkter och tjänster.</p>
-              <a href="https://www.adlibris.com/se/bok/beteendedesign-9789127819191" target="_blank" rel="noopener noreferrer" className="book-link">
-                Köp boken →
-              </a>
-            </div>
+            <a href="https://www.adlibris.com/se/bok/beteendedesign-9789127819191" target="_blank" rel="noopener noreferrer" className="book-card">
+              <div className="book-cover">
+                <img src="https://www.adlibris.com/images/9789127819191/beteendedesign-psykologin-som-forandrar-tankar-kanslor-och-handlingar.jpg" alt="Beteendedesign" />
+              </div>
+              <div className="book-info">
+                <div className="book-year">2017</div>
+                <h3>Beteendedesign</h3>
+                <p className="book-publisher">Natur & Kultur</p>
+                <p>En praktisk guide till hur du kan använda beteendeekonomi för att designa bättre produkter och tjänster.</p>
+              </div>
+            </a>
 
-            <div className="book-card">
-              <div className="book-year">2018</div>
-              <h3>Beslutsfällan</h3>
-              <p className="book-publisher">Volante</p>
-              <p>Varför fattar vi dåliga beslut – och hur kan vi bli bättre? Om de psykologiska fällor som styr våra val.</p>
-              <a href="https://www.adlibris.com/se/bok/beslutfallan-9789188659583" target="_blank" rel="noopener noreferrer" className="book-link">
-                Köp boken →
-              </a>
-            </div>
+            <a href="https://www.adlibris.com/se/bok/beslutfallan-9789188659583" target="_blank" rel="noopener noreferrer" className="book-card">
+              <div className="book-cover">
+                <img src="https://www.adlibris.com/images/9789188659583/beslutsfallan-genomskada-psykologin-som-styr-dina-val.jpg" alt="Beslutsfällan" />
+              </div>
+              <div className="book-info">
+                <div className="book-year">2018</div>
+                <h3>Beslutsfällan</h3>
+                <p className="book-publisher">Volante</p>
+                <p>Varför fattar vi dåliga beslut – och hur kan vi bli bättre? Om de psykologiska fällor som styr våra val.</p>
+              </div>
+            </a>
 
-            <div className="book-card">
-              <div className="book-year">2019</div>
-              <h3>Digitala beteenden</h3>
-              <p className="book-publisher">Natur & Kultur</p>
-              <p>Hur påverkar den digitala världen oss? Om skärmtid, sociala medier och en sundare relation till teknik.</p>
-              <a href="https://www.adlibris.com/se/bok/digitala-beteenden-9789127824454" target="_blank" rel="noopener noreferrer" className="book-link">
-                Köp boken →
-              </a>
-            </div>
+            <a href="https://www.adlibris.com/se/bok/digitala-beteenden-9789127824454" target="_blank" rel="noopener noreferrer" className="book-card">
+              <div className="book-cover">
+                <img src="https://www.adlibris.com/images/9789127824454/digitala-beteenden-en-verktygslada-for-kundfokuserad-design.jpg" alt="Digitala beteenden" />
+              </div>
+              <div className="book-info">
+                <div className="book-year">2019</div>
+                <h3>Digitala beteenden</h3>
+                <p className="book-publisher">Natur & Kultur</p>
+                <p>Hur påverkar den digitala världen oss? Om skärmtid, sociala medier och en sundare relation till teknik.</p>
+              </div>
+            </a>
           </div>
         </div>
       </section>

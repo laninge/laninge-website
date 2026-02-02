@@ -274,11 +274,16 @@
 
 .books-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
 }
 
 .book-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
   padding: 2rem;
   border-radius: 16px;
   background: #fafafa;
@@ -287,6 +292,33 @@
 
 .book-card:hover {
   background: #f0f0f0;
+}
+
+.book-cover {
+  perspective: 1000px;
+  margin-bottom: 1.5rem;
+}
+
+.book-cover img {
+  width: 180px;
+  height: auto;
+  border-radius: 4px;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.2),
+    0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease;
+  transform-style: preserve-3d;
+}
+
+.book-card:hover .book-cover img {
+  transform: rotateY(-15deg) rotateX(5deg) translateY(-10px);
+  box-shadow:
+    20px 20px 40px rgba(0, 0, 0, 0.25),
+    0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.book-info {
+  text-align: center;
 }
 
 .book-year {
@@ -308,21 +340,10 @@
   margin-bottom: 1rem;
 }
 
-.book-card > p:not(.book-publisher) {
+.book-info > p:not(.book-publisher) {
   color: #666;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.book-link {
-  font-weight: 500;
-  color: #6366f1;
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.book-link:hover {
-  color: #4f46e5;
+  margin: 0;
 }
 
 /* Contact Section */
