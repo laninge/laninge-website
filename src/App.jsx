@@ -13,7 +13,7 @@ function App() {
             Som sparpsykolog på Opti gör jag beteendeekonomi till praktiska verktyg för ett bättre sparande.
           </p>
           <div className="hero-cta">
-            <a href="https://niklaslaning.substack.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+            <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
               Prenumerera på nyhetsbrevet
             </a>
           </div>
@@ -59,7 +59,7 @@ function App() {
           <p className="section-intro">Senaste artiklarna, poddar och medieklipp</p>
 
           <div className="media-grid">
-            <a href="https://niklaslaning.substack.com" target="_blank" rel="noopener noreferrer" className="media-card media-card-featured">
+            <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="media-card media-card-featured">
               <span className="media-type">Nyhetsbrev</span>
               <h3>Substack</h3>
               <p>Insikter om beteendeekonomi, konsumentpsykologi och sparande.</p>
