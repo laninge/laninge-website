@@ -137,6 +137,18 @@ function App() {
           <p className="section-intro">Urval av intervjuer och framträdanden</p>
 
           <div className="press-list">
+            <a href="https://www.dn.se/insidan/sparpsykologen-impulsiva-personer-ar-hett-villebrad-under-black-week/" target="_blank" rel="noopener noreferrer" className="press-item">
+              <span className="press-source">Dagens Nyheter</span>
+              <span className="press-title">Impulsiva personer är hett villebråd under Black Week</span>
+              <span className="press-date">Nov 2025</span>
+            </a>
+
+            <a href="https://www.dn.se/ekonomi/sparpsykologen-om-die-with-zero-kansligt-folk-hatar-att-tanka-pa-doden/" target="_blank" rel="noopener noreferrer" className="press-item">
+              <span className="press-source">Dagens Nyheter</span>
+              <span className="press-title">Om Die with Zero: "Känsligt – folk hatar att tänka på döden"</span>
+              <span className="press-date">Okt 2025</span>
+            </a>
+
             <a href="https://www.svtplay.se/video/ePBB221/ekonomibyran/sociala-mediers-dod" target="_blank" rel="noopener noreferrer" className="press-item">
               <span className="press-source">SVT Ekonomibyrån</span>
               <span className="press-title">Sociala mediers död</span>
