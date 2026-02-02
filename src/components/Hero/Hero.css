@@ -1,0 +1,35 @@
+.hero {
+  padding: var(--spacing-2xl) 0;
+  text-align: center;
+}
+
+.hero-title {
+  margin-bottom: var(--spacing-xs);
+}
+
+.hero-tagline {
+  font-size: 1.25rem;
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-md);
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--color-text);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .hero-tagline {
+    font-size: 1.125rem;
+  }
+
+  .hero-description {
+    font-size: 1rem;
+  }
+}

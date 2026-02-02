@@ -1,0 +1,30 @@
+.contact h1 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.contact-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.contact-section h2 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-section p {
+  margin-bottom: var(--spacing-sm);
+}
+
+.contact-link {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.social-links a {
+  font-weight: 500;
+}

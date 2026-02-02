@@ -1,0 +1,14 @@
+.books h1 {
+  margin-bottom: var(--spacing-sm);
+}
+
+.books-intro {
+  color: var(--color-text-muted);
+  margin-bottom: var(--spacing-lg);
+}
+
+.books-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
