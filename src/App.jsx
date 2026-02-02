@@ -6,11 +6,10 @@ function App() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <p className="hero-label">Psykolog & författare</p>
+          <p className="hero-label">Sparpsykolog & författare</p>
           <h1 className="hero-title">Niklas Laninge</h1>
           <p className="hero-subtitle">
-            Jag hjälper människor förstå varför vi fattar de beslut vi gör.
-            Som sparpsykolog på Opti gör jag beteendeekonomi till praktiska verktyg för ett bättre sparande.
+            Sparpsykolog hos Opti som pratar om pengar och dess roll i våra liv.
           </p>
           <div className="hero-cta">
             <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
@@ -36,17 +35,17 @@ function App() {
             <div className="about-card">
               <span className="about-icon">📚</span>
               <h3>Författare</h3>
-              <p>Tre böcker om beteendeekonomi tillsammans med Arvid Janson. Fjärde boken på gång.</p>
+              <p>Tre böcker om beteendedesign.</p>
             </div>
             <div className="about-card">
               <span className="about-icon">💰</span>
               <h3>Sparpsykolog</h3>
-              <p>PR-ansvarig och sparpsykolog på Opti, svensk fintech som hjälper människor spara smartare.</p>
+              <p>Optis talesperson som hjälper människor att börja spara, spara mer och fortsätta spara.</p>
             </div>
             <div className="about-card">
               <span className="about-icon">🎤</span>
               <h3>Mediaexpert</h3>
-              <p>Omvandlar komplexa beteendeinsikter till begripliga mediemoment.</p>
+              <p>Psykolog som förklarar finansiella och privatekonomiska fenomen.</p>
             </div>
           </div>
         </div>
@@ -91,7 +90,7 @@ function App() {
       <section className="section section-books">
         <div className="section-content">
           <h2 className="section-label">Böcker</h2>
-          <p className="section-intro">Tre böcker om beteendedesign, tillsammans med Arvid Janson</p>
+          <p className="section-intro">Tre böcker om beteendedesign</p>
 
           <div className="books-grid">
             <div className="book-card">
@@ -135,9 +134,9 @@ function App() {
             Vill du boka mig för en föreläsning, intervju eller kommentar? Hör av dig.
           </p>
           <div className="contact-links">
-            <a href="mailto:niklas@laninge.com" className="contact-link">
+            <a href="mailto:niklas.laninge@gmail.com" className="contact-link">
               <span className="contact-icon">✉️</span>
-              niklas@laninge.com
+              niklas.laninge@gmail.com
             </a>
             <a href="https://www.linkedin.com/in/laninge/" target="_blank" rel="noopener noreferrer" className="contact-link">
               <span className="contact-icon">💼</span>
