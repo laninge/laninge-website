@@ -5,16 +5,21 @@ function App() {
     <div className="app">
       {/* Hero Section */}
       <section className="hero">
-        <div className="hero-content">
-          <p className="hero-label">Sparpsykolog & författare</p>
-          <h1 className="hero-title">Niklas Laninge</h1>
-          <p className="hero-subtitle">
-            Sparpsykolog hos Opti som pratar om pengar och dess roll i våra liv.
-          </p>
-          <div className="hero-cta">
-            <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-              Prenumerera på nyhetsbrevet
-            </a>
+        <div className="hero-inner">
+          <div className="hero-content">
+            <p className="hero-label">Sparpsykolog & författare</p>
+            <h1 className="hero-title">Niklas Laninge</h1>
+            <p className="hero-subtitle">
+              Sparpsykolog hos Opti som pratar om pengar och dess roll i våra liv.
+            </p>
+            <div className="hero-cta">
+              <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                Prenumerera på nyhetsbrevet
+              </a>
+            </div>
+          </div>
+          <div className="hero-image">
+            <img src="/niklas.jpg" alt="Niklas Laninge" />
           </div>
         </div>
         <div className="hero-scroll-indicator">
