@@ -120,79 +120,6 @@ function App() {
         </div>
       </section>
 
-      {/* Media Section - Dynamic Feed */}
-      <section className="section section-media">
-        <div className="section-content">
-          <h2 className="section-label">Läs & lyssna</h2>
-          <p className="section-intro">Senaste artiklarna, poddar och medieklipp</p>
-
-          <div className="media-grid">
-            <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="media-card media-card-featured">
-              <span className="media-type">Nyhetsbrev</span>
-              <h3>Substack</h3>
-              <p>Insikter om beteendeekonomi, konsumentpsykologi och sparande.</p>
-              <span className="media-arrow">→</span>
-            </a>
-
-            <a href="https://omniekonomi.se/t/folj-skribenten-niklas-laninge/e51a66da-c58c-4eca-88ba-1f57a3ba365d" target="_blank" rel="noopener noreferrer" className="media-card">
-              <span className="media-type">Krönika</span>
-              <h3>Omni Ekonomi</h3>
-              <p>Regelbundna krönikor om ekonomiskt beteende och konsumtion.</p>
-            </a>
-
-            <a href="https://open.spotify.com/show/6x65WFaPmYlHLB19ECjh77" target="_blank" rel="noopener noreferrer" className="media-card">
-              <span className="media-type">Podcast</span>
-              <h3>Tidlösa sanningar om pengar</h3>
-              <p>Podd om sparande och privatekonomi – med beteendevetenskapliga glasögon.</p>
-            </a>
-          </div>
-
-          <p className="media-note">
-            Mer innehåll läggs till automatiskt här framöver.
-          </p>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      {newsletters.length > 0 && (
-        <section className="section section-newsletter">
-          <div className="section-content">
-            <h2 className="section-label">Senaste från nyhetsbrevet</h2>
-            <p className="section-intro">De senaste utgåvorna från mitt Substack</p>
-
-            <div className="newsletter-list">
-              {newsletters.map((item, i) => (
-                <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="newsletter-item">
-                  <span className="newsletter-number">#{item.title.match(/#(\d+)/)?.[1] || i + 1}</span>
-                  <span className="newsletter-title">{item.title}</span>
-                  <span className="newsletter-date">{formatDate(item.date)}</span>
-                </a>
-              ))}
-            </div>
-
-            <div className="newsletter-subscribe">
-              <div className="newsletter-subscribe-inner">
-                <div className="newsletter-subscribe-text">
-                  <h3>Varannan vecka, direkt i inkorgen</h3>
-                  <p>Insikter om beteendeekonomi, sparande och konsumentpsykologi.</p>
-                </div>
-                <div className="newsletter-subscribe-form">
-                  <iframe
-                    src="https://laninge.substack.com/embed"
-                    width="100%"
-                    height="150"
-                    style={{ border: 'none', background: 'transparent' }}
-                    frameBorder="0"
-                    scrolling="no"
-                    title="Prenumerera på nyhetsbrevet"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* Books Section */}
       <section className="section section-books">
         <div className="section-content">
@@ -235,6 +162,53 @@ function App() {
                 <p>Hur påverkar den digitala världen oss? Om skärmtid, sociala medier och en sundare relation till teknik.</p>
               </div>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Media Section */}
+      <section className="section section-media">
+        <div className="section-content">
+          <h2 className="section-label">Läs & lyssna</h2>
+          <p className="section-intro">Senaste artiklarna, poddar och medieklipp</p>
+
+          <div className="media-grid">
+            <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="media-card media-card-featured">
+              <span className="media-type">Nyhetsbrev</span>
+              <h3>Substack</h3>
+              <p>Insikter om beteendeekonomi, konsumentpsykologi och sparande.</p>
+              <span className="media-arrow">→</span>
+            </a>
+
+            <a href="https://omniekonomi.se/t/folj-skribenten-niklas-laninge/e51a66da-c58c-4eca-88ba-1f57a3ba365d" target="_blank" rel="noopener noreferrer" className="media-card">
+              <span className="media-type">Krönika</span>
+              <h3>Omni Ekonomi</h3>
+              <p>Regelbundna krönikor om ekonomiskt beteende och konsumtion.</p>
+            </a>
+
+            <a href="https://open.spotify.com/show/6x65WFaPmYlHLB19ECjh77" target="_blank" rel="noopener noreferrer" className="media-card">
+              <span className="media-type">Podcast</span>
+              <h3>Tidlösa sanningar om pengar</h3>
+              <p>Podd om sparande och privatekonomi – med beteendevetenskapliga glasögon.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter Section */}
+      <section className="section section-newsletter">
+        <div className="section-content">
+          <h2 className="section-label">Senaste från nyhetsbrevet</h2>
+          <p className="section-intro">De senaste utgåvorna från mitt Substack</p>
+
+          <div className="newsletter-list">
+            {newsletters.map((item, i) => (
+              <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="newsletter-item">
+                <span className="newsletter-number">#{item.title.match(/#(\d+)/)?.[1] || i + 1}</span>
+                <span className="newsletter-title">{item.title}</span>
+                <span className="newsletter-date">{formatDate(item.date)}</span>
+              </a>
+            ))}
           </div>
         </div>
       </section>
