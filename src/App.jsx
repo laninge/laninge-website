@@ -40,20 +40,27 @@ function App() {
         <div className="top-bar">
           <div className="top-bar-inner">
             <p className="top-bar-text">
-              <strong>Veckovisa insikter om beteendeförändring.</strong>{' '}
-              Prenumerera på nyhetsbrevet – direkt i inkorgen.
+              <strong>Veckovisa insikter om beteendeförändring.</strong>
             </p>
-            <div className="top-bar-embed">
-              <iframe
-                src="https://laninge.substack.com/embed"
-                width="400"
-                height="150"
-                style={{ border: 'none', background: 'transparent' }}
-                frameBorder="0"
-                scrolling="no"
-                title="Prenumerera"
+            <form
+              className="top-bar-form"
+              action="https://laninge.substack.com/api/v1/free?nojs=true"
+              method="post"
+              target="_blank"
+            >
+              <input type="hidden" name="first_url" value="https://laninge.substack.com/" />
+              <input type="hidden" name="first_referrer" value="" />
+              <input type="hidden" name="current_url" value="https://laninge.com/" />
+              <input type="hidden" name="current_referrer" value="" />
+              <input
+                type="email"
+                name="email"
+                placeholder="Din e-postadress"
+                required
+                className="top-bar-input"
               />
-            </div>
+              <button type="submit" className="top-bar-btn">Prenumerera</button>
+            </form>
             <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="top-bar-mobile-btn">
               Prenumerera
             </a>
