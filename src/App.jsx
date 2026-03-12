@@ -206,7 +206,7 @@ function App() {
       <section className="section section-newsletter">
         <div className="section-content">
           <h2 className="section-label">Senaste från nyhetsbrevet</h2>
-          <p className="section-intro">De senaste utgåvorna från mitt Substack</p>
+          <p className="section-intro">Mina senaste nyhetsbrev</p>
 
           <div className="newsletter-list">
             {newsletters.map((item, i) => (
