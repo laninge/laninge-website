@@ -46,8 +46,8 @@ function App() {
             <div className="top-bar-embed">
               <iframe
                 src="https://laninge.substack.com/embed"
-                width="320"
-                height="80"
+                width="400"
+                height="150"
                 style={{ border: 'none', background: 'transparent' }}
                 frameBorder="0"
                 scrolling="no"
