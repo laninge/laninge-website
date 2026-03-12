@@ -1,6 +1,29 @@
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
+  const [newsletters, setNewsletters] = useState([])
+
+  useEffect(() => {
+    fetch('https://laninge.substack.com/feed')
+      .then(res => res.text())
+      .then(xml => {
+        const parser = new DOMParser()
+        const doc = parser.parseFromString(xml, 'text/xml')
+        const items = Array.from(doc.querySelectorAll('item')).slice(0, 5).map(item => ({
+          title: item.querySelector('title')?.textContent || '',
+          link: item.querySelector('link')?.textContent || '',
+          date: new Date(item.querySelector('pubDate')?.textContent || ''),
+        }))
+        setNewsletters(items)
+      })
+      .catch(() => {})
+  }, [])
+
+  const formatDate = (date) => {
+    return date.toLocaleDateString('sv-SE', { year: 'numeric', month: 'short', day: 'numeric' })
+  }
+
   return (
     <div className="app">
       {/* Hero Section */}
@@ -89,6 +112,32 @@ function App() {
         </div>
       </section>
 
+      {/* Newsletter Section */}
+      {newsletters.length > 0 && (
+        <section className="section section-newsletter">
+          <div className="section-content">
+            <h2 className="section-label">Senaste från nyhetsbrevet</h2>
+            <p className="section-intro">De senaste utgåvorna från mitt Substack</p>
+
+            <div className="newsletter-list">
+              {newsletters.map((item, i) => (
+                <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="newsletter-item">
+                  <span className="newsletter-number">#{item.title.match(/#(\d+)/)?.[1] || i + 1}</span>
+                  <span className="newsletter-title">{item.title}</span>
+                  <span className="newsletter-date">{formatDate(item.date)}</span>
+                </a>
+              ))}
+            </div>
+
+            <div className="newsletter-cta">
+              <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                Prenumerera
+              </a>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Books Section */}
       <section className="section section-books">
         <div className="section-content">
@@ -138,7 +187,7 @@ function App() {
       {/* Press Section */}
       <section className="section section-press">
         <div className="section-content">
-          <h2 className="section-label">Senaste i media</h2>
+          <h2 className="section-label">I media</h2>
           <p className="section-intro">Urval av intervjuer och framträdanden</p>
 
           <div className="press-list">
