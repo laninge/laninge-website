@@ -35,22 +35,35 @@
   color: white;
 }
 
-.top-bar-btn {
+.top-bar-embed {
   flex-shrink: 0;
-  display: inline-block;
+  height: 50px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.top-bar-embed iframe {
+  display: block;
+  margin-top: -12px;
+}
+
+.top-bar-mobile-btn {
+  display: none;
+  flex-shrink: 0;
   padding: 0.5rem 1.25rem;
   font-size: 0.8125rem;
   font-weight: 600;
   text-decoration: none;
-  color: #1a1a2e;
-  background: #f5c542;
-  border-radius: 4px;
+  color: white;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 50px;
   transition: all 0.2s ease;
 }
 
-.top-bar-btn:hover {
-  background: #ffd666;
+.top-bar-mobile-btn:hover {
   transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
 }
 
 .top-bar-close {
@@ -86,9 +99,12 @@
     font-size: 0.75rem;
   }
 
-  .top-bar-btn {
-    padding: 0.4rem 1rem;
-    font-size: 0.75rem;
+  .top-bar-embed {
+    display: none;
+  }
+
+  .top-bar-mobile-btn {
+    display: inline-block;
   }
 }
 

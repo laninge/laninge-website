@@ -2,7 +2,15 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
-  const [newsletters, setNewsletters] = useState([])
+  const fallbackNewsletters = [
+    { title: 'Niklas Laninges nyhetsbrev #288', link: 'https://laninge.substack.com/p/niklas-laninges-nyhetsbrev-288', date: new Date('2026-03-08') },
+    { title: 'Niklas Laninges nyhetsbrev #287', link: 'https://laninge.substack.com/p/niklas-laninges-nyhetsbrev-287', date: new Date('2026-02-22') },
+    { title: 'Niklas Laninges nyhetsbrev #286', link: 'https://laninge.substack.com/p/niklas-laninges-nyhetsbrev-286', date: new Date('2026-02-08') },
+    { title: 'Niklas Laninge nyhetsbrev #285', link: 'https://laninge.substack.com/p/niklas-laninge-nyhetsbrev-285', date: new Date('2026-01-25') },
+    { title: 'Niklas Laninges nyhetsbrev #284', link: 'https://laninge.substack.com/p/niklas-laninges-nyhetsbrev-284', date: new Date('2026-01-11') },
+  ]
+
+  const [newsletters, setNewsletters] = useState(fallbackNewsletters)
   const [showTopBar, setShowTopBar] = useState(true)
 
   useEffect(() => {
@@ -16,7 +24,7 @@ function App() {
           link: item.querySelector('link')?.textContent || '',
           date: new Date(item.querySelector('pubDate')?.textContent || ''),
         }))
-        setNewsletters(items)
+        if (items.length > 0) setNewsletters(items)
       })
       .catch(() => {})
   }, [])
@@ -32,10 +40,21 @@ function App() {
         <div className="top-bar">
           <div className="top-bar-inner">
             <p className="top-bar-text">
-              <strong>Insikter om pengar och beteende.</strong>{' '}
-              Prenumerera på nyhetsbrevet – varannan vecka, direkt i inkorgen.
+              <strong>Veckovisa insikter om beteendeförändring.</strong>{' '}
+              Prenumerera på nyhetsbrevet – direkt i inkorgen.
             </p>
-            <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="top-bar-btn">
+            <div className="top-bar-embed">
+              <iframe
+                src="https://laninge.substack.com/embed"
+                width="320"
+                height="80"
+                style={{ border: 'none', background: 'transparent' }}
+                frameBorder="0"
+                scrolling="no"
+                title="Prenumerera"
+              />
+            </div>
+            <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="top-bar-mobile-btn">
               Prenumerera
             </a>
             <button className="top-bar-close" onClick={() => setShowTopBar(false)} aria-label="Stäng">
