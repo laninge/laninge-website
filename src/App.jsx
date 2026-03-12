@@ -3,6 +3,7 @@ import './App.css'
 
 function App() {
   const [newsletters, setNewsletters] = useState([])
+  const [showTopBar, setShowTopBar] = useState(true)
 
   useEffect(() => {
     fetch('https://laninge.substack.com/feed')
@@ -25,7 +26,28 @@ function App() {
   }
 
   return (
-    <div className="app">
+    <div className={`app ${showTopBar ? 'has-top-bar' : ''}`}>
+      {/* Top Newsletter Bar */}
+      {showTopBar && (
+        <div className="top-bar">
+          <div className="top-bar-inner">
+            <p className="top-bar-text">
+              <strong>Insikter om pengar och beteende.</strong>{' '}
+              Prenumerera på nyhetsbrevet – varannan vecka, direkt i inkorgen.
+            </p>
+            <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="top-bar-btn">
+              Prenumerera
+            </a>
+            <button className="top-bar-close" onClick={() => setShowTopBar(false)} aria-label="Stäng">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-inner">
@@ -129,10 +151,24 @@ function App() {
               ))}
             </div>
 
-            <div className="newsletter-cta">
-              <a href="https://laninge.substack.com" target="_blank" rel="noopener noreferrer" className="btn btn-primary">
-                Prenumerera
-              </a>
+            <div className="newsletter-subscribe">
+              <div className="newsletter-subscribe-inner">
+                <div className="newsletter-subscribe-text">
+                  <h3>Varannan vecka, direkt i inkorgen</h3>
+                  <p>Insikter om beteendeekonomi, sparande och konsumentpsykologi.</p>
+                </div>
+                <div className="newsletter-subscribe-form">
+                  <iframe
+                    src="https://laninge.substack.com/embed"
+                    width="100%"
+                    height="150"
+                    style={{ border: 'none', background: 'transparent' }}
+                    frameBorder="0"
+                    scrolling="no"
+                    title="Prenumerera på nyhetsbrevet"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
