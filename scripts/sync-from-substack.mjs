@@ -26,7 +26,9 @@ const EMBEDDING_DIM = 512
 const BATCH_SIZE = 64
 const PREAMBLE_MAX_LEN = 240
 const MIN_CHUNK_CHARS = 120
-const FEED_URL = 'https://laninge.substack.com/feed'
+// Fetch through our own domain — Substack blocks GitHub runner IPs
+// even with browser UA, but Vercel egress passes through.
+const FEED_URL = process.env.FEED_URL || 'https://laninge.com/api/feed'
 
 if (!VOYAGE_API_KEY) {
   console.error('ERROR: VOYAGE_API_KEY env var is required.')
