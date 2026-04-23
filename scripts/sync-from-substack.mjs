@@ -143,7 +143,12 @@ async function embedBatch(texts) {
 
 async function fetchFeed() {
   const res = await fetch(FEED_URL, {
-    headers: { 'User-Agent': 'laninge.com sync/1.0' },
+    headers: {
+      // Substack blocks obvious bot UAs with 403. Use a realistic one.
+      'User-Agent':
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/127.0.0.0 Safari/537.36',
+      Accept: 'application/rss+xml, application/xml, text/xml',
+    },
   })
   if (!res.ok) throw new Error(`Feed fetch failed: ${res.status}`)
   return res.text()
