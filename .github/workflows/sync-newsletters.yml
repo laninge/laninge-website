@@ -1,0 +1,47 @@
+name: Sync newsletters from Substack
+
+# Runs every Monday 10:00 UTC (the day after Niklas typically publishes
+# on Sunday). The sync script is idempotent — if no new newsletters are
+# found, it exits without committing anything. Can also be triggered
+# manually from the Actions tab.
+
+on:
+  schedule:
+    - cron: '0 10 * * 1'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Sync from Substack RSS
+        env:
+          VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+        run: npm run sync
+
+      - name: Commit and push if embeddings changed
+        run: |
+          if [[ -n "$(git status --porcelain api/_data/embeddings.json)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add api/_data/embeddings.json
+            git commit -m "Sync new newsletters from Substack"
+            git push
+            echo "✓ Pushed updated embeddings.json — Vercel will auto-deploy"
+          else
+            echo "No new newsletters — nothing to commit"
+          fi
