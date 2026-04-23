@@ -1,0 +1,232 @@
+.section-search {
+  background: #fff;
+}
+
+.search-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  background: #fafafa;
+  color: #1a1a1a;
+  outline: none;
+  transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  font-family: inherit;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.search-input:focus {
+  border-color: #6366f1;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.search-input:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.search-btn {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.search-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.3);
+}
+
+.search-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.search-examples {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.search-examples-label {
+  font-size: 0.8125rem;
+  color: #999;
+  margin-right: 0.25rem;
+}
+
+.search-example {
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8125rem;
+  background: #f5f5ff;
+  color: #4f46e5;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.search-example:hover {
+  background: #ebebff;
+  border-color: rgba(99, 102, 241, 0.4);
+}
+
+.search-error {
+  margin-top: 1rem;
+  padding: 1rem 1.25rem;
+  background: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  font-size: 0.9375rem;
+}
+
+.search-error strong {
+  font-weight: 600;
+}
+
+.search-result {
+  margin-top: 1.5rem;
+  padding: 2rem;
+  background: #fafafa;
+  border-radius: 16px;
+  border: 1px solid #eee;
+}
+
+.search-answer {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: #1a1a1a;
+}
+
+.search-answer p {
+  margin: 0 0 1rem 0;
+}
+
+.search-answer p:last-child {
+  margin-bottom: 0;
+}
+
+.search-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 1.1em;
+  background: #6366f1;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  animation: search-blink 1s steps(2, start) infinite;
+}
+
+@keyframes search-blink {
+  to {
+    visibility: hidden;
+  }
+}
+
+.search-sources {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.search-sources-label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #6366f1;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.search-sources-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.search-source-chip {
+  display: grid;
+  grid-template-columns: 60px 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.875rem 1rem;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.search-source-chip:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  background: #fafaff;
+  transform: translateX(2px);
+}
+
+.search-source-nr {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #6366f1;
+  font-variant-numeric: tabular-nums;
+}
+
+.search-source-title {
+  font-size: 0.9375rem;
+  color: #1a1a1a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.search-source-date {
+  font-size: 0.8125rem;
+  color: #999;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .search-form {
+    flex-direction: column;
+  }
+
+  .search-btn {
+    width: 100%;
+  }
+
+  .search-result {
+    padding: 1.5rem;
+  }
+
+  .search-source-chip {
+    grid-template-columns: 50px 1fr;
+    gap: 0.75rem;
+  }
+
+  .search-source-date {
+    grid-column: 2;
+    font-size: 0.75rem;
+    margin-top: 0.125rem;
+  }
+}

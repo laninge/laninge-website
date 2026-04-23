@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import CookieConsent from './CookieConsent'
+import NewsletterSearch from './components/NewsletterSearch'
 
 function App() {
   const fallbackNewsletters = [
@@ -200,6 +201,9 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Newsletter Search (AI) */}
+      <NewsletterSearch />
 
       {/* Newsletter Section */}
       <section className="section section-newsletter">
