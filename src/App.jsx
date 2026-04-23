@@ -15,15 +15,13 @@ function App() {
   const [showTopBar, setShowTopBar] = useState(true)
 
   useEffect(() => {
-    fetch('https://laninge.substack.com/feed')
-      .then(res => res.text())
-      .then(xml => {
-        const parser = new DOMParser()
-        const doc = parser.parseFromString(xml, 'text/xml')
-        const items = Array.from(doc.querySelectorAll('item')).slice(0, 5).map(item => ({
-          title: item.querySelector('title')?.textContent || '',
-          link: item.querySelector('link')?.textContent || '',
-          date: new Date(item.querySelector('pubDate')?.textContent || ''),
+    fetch('/api/newsletters')
+      .then(res => res.json())
+      .then(data => {
+        const items = (data.items || []).map(item => ({
+          title: item.title,
+          link: item.link,
+          date: new Date(item.date),
         }))
         if (items.length > 0) setNewsletters(items)
       })
