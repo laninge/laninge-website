@@ -111,7 +111,7 @@ function App() {
             <div className="about-card">
               <span className="about-icon">📚</span>
               <h3>Författare</h3>
-              <p>Tre böcker om beteendedesign.</p>
+              <p>Fyra böcker – senast <em>Psykologin bakom pengarna</em>.</p>
             </div>
             <div className="about-card">
               <span className="about-icon">💰</span>
@@ -131,7 +131,52 @@ function App() {
       <section className="section section-books">
         <div className="section-content">
           <h2 className="section-label">Böcker</h2>
-          <p className="section-intro">Tre böcker om beteendedesign</p>
+          <p className="section-intro">Fyra böcker om psykologin bakom våra beslut</p>
+
+          {/* Featured: kommande bok */}
+          <div className="book-feature">
+            <a
+              href="https://www.adlibris.com/sv/bok/psykologin-bakom-pengarna-sa-sparar-investerar-och-spenderar-du-for-ett-rikare-liv-9789178878031"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="book-feature-cover"
+              aria-label="Förbeställ Psykologin bakom pengarna på Adlibris"
+            >
+              <img src="/images/psykologin-bakom-pengarna.jpg" alt="Omslag: Psykologin bakom pengarna av Niklas Laninge" />
+            </a>
+
+            <div className="book-feature-body">
+              <span className="book-feature-badge">Ny bok · 7 januari 2027</span>
+              <h3 className="book-feature-title">Psykologin bakom pengarna</h3>
+              <p className="book-feature-subtitle">Så sparar, investerar och spenderar du för ett rikare liv</p>
+
+              <p className="book-feature-text">
+                Boken för dig som vill få ordning på din ekonomi utan att leva snålt eller bli besatt av börsen.
+                Med hjälp av modern psykologi och beteendeekonomi visar jag varför det oftast är våra vanor,
+                känslor och impulser som står mellan oss och ett rikare liv.
+              </p>
+              <p className="book-feature-text">
+                Här får du konkreta verktyg för att spara mer, investera smartare och spendera pengar på
+                sådant som faktiskt gör dig lyckligare. Utan pekpinnar.
+              </p>
+
+              <div className="book-feature-cta">
+                <a
+                  href="https://www.adlibris.com/sv/bok/psykologin-bakom-pengarna-sa-sparar-investerar-och-spenderar-du-for-ett-rikare-liv-9789178878031"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-primary"
+                >
+                  Förbeställ på Adlibris
+                </a>
+                <span className="book-feature-note">Boken skickas så fort den släpps den 7 januari 2027.</span>
+              </div>
+
+              <p className="book-feature-meta">Bonnier Fakta · Kartonnage · 200 sidor · ISBN 978-91-7887-803-1</p>
+            </div>
+          </div>
+
+          <h3 className="books-backlist-label">Tidigare böcker</h3>
 
           <div className="books-grid">
             <a href="https://www.adlibris.com/se/bok/beteendedesign-9789127819191" target="_blank" rel="noopener noreferrer" className="book-card">
