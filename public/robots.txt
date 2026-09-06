@@ -1,0 +1,7 @@
+# Robots.txt for laninge.com
+User-agent: *
+Allow: /
+
+Disallow: /api/
+
+Sitemap: https://www.laninge.com/sitemap.xml

@@ -3,7 +3,7 @@ import { embedQuery, retrieve, dedupeSources } from './_lib/retrieve.js'
 import { buildSystemPrompt, buildUserMessage } from './_lib/prompt.js'
 import { checkRateLimit, getCached, setCached, extractIp } from './_lib/ratelimit.js'
 
-const MODEL = 'claude-sonnet-4-6'
+const MODEL = 'claude-sonnet-5'
 const TOP_K = 4
 const MAX_SOURCES = 4
 const MAX_OUTPUT_TOKENS = 1024
